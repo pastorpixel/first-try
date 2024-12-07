@@ -40,15 +40,22 @@
                 <h2>Eingabeaufforderung</h2>
                 <p>Bevor man mit Git arbeitet, sollte man die Eingabeaufforderung/ Kommandozeile oder Windows Power
                     Shell kennen.
-                    Die Eingabeaufforderung ist ein Programm, mit dem man auf Windows und DOS zugreifen kann.
-                    Es hat keine grafische Benutzeroberfläche, sondern ist eine Text-Eingabeaufforderung.
+                    Die Eingabeaufforderung ist ein Programm, mit dem man auf Windows und DOS zugreifen kann. Die
+                    Windows Power Shell ist ein anderes, ähnliches Programm.
+                    Beide haben keine grafische Benutzeroberfläche, stattdessen gibt es eine Text-Eingabeaufforderung.
                     Hiermit kann man Ordner und Dateien aufrufen, Dateien erstellen oder löschen
-                    oder sogar Programme installieren, die sich nur über die Eingabeaufforderung installieren lassen,
-                    wie beispielsweise git.
+                    oder sogar Programme installieren, die sich nur über die Eingabeaufforderung installieren lassen.
                 </p>
+                <p>Man kann Package-Manager wie <a href="https://chocolatey.org/">chocolatey</a> oder npm installieren
+                    mit dem sich dann weitere und auch mehrere Programme auf einmal installieren lassen. chocolaty
+                    ermöglicht beispielsweise die Installation des Flashplayers.</p>
+                <p>Desweiteren kann man mit der Eingabeaufforderung auch Automatisierungen erstellen. Diese werden in
+                    einer Datei gespeichert und können dann aufgerufen werden. So ließe sich eine Reihe von Programmen
+                    installieren und aufrufen.</p>
 
                 <p>Man öffnet die Eingabeaufforderung indem man im Suchen-Fenster unten <kbd>cmd</kbd> und dann
-                    <kbd>Enter</kbd>eingibt.
+                    <kbd>Enter</kbd>eingibt. Auch in VSC kann oben über das Menü ein Terminal/ Eingabeaufforderung
+                    aufrufen.
                 </p>
                 <p>Man kann über die rechte Maustaste die Darstellung des Fensters ändern (Schrift, Hintergrundfarbe
                     etc.)</p>
@@ -121,9 +128,12 @@
                             Laufwerksbuchstaben.</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>code</td>
+                        <td>in VSC öffnen <br>
+                            code "D:\web\work\git-lernen" <br>
+                            code .
+                        </td>
+                        <td>In VSC öffnen oder man gibt den . ein, um den akutellen Ordner zu öffnen</td>
                     </tr>
                     <tr>
                         <td>chkdsk</td>
@@ -145,12 +155,61 @@
                         <td>Fährt das System runter</td>
                     </tr>
                 </table>
-
+                <h3>Automatisierungen</h3>
+                <p>Erstelle eine Textdatei mit Notepad und speichere sie mit der Endung cmd oder bat ab. Füge dort
+                    Befehle ein. Beim Aufruf werden diese Befehle ausgeführt. <br>
+                    Mehrere Befehle werden in einzelnen Zeilen abgelegt.
+                </p>
             </section>
 
 
             <section>
                 <h2>Git</h2>
+                <p>Git ermöglicht das Sichern verschiedener Versionen von Projekten. Man kann ein Projekt Schritt für
+                    Schritt aufbauen und dann später mittels Git die verschiedenen Schritte oder Zustände des Projekts
+                    erkunden.</p>
+                <p>Git ermöglicht die Zusammenarbeit in Teams und außerdem kann mein Projekt bei Github hochladen und
+                    bereitstellen.</p>
+                <p>Lege dazu einen Account bei git Hub an.</p>
+                <p>Installiere Git auf dem Rechner.</p>
+                <p>Nun kann man mit der Eingabeaufforderung git Befehle eingeben. Sie beginnen immer mit
+                    <code>git</code>
+                </p>
+                <p>Erstelle ein Projekt in einem Ordner. Wähle mit der Eingabeaufforderung den Ordner aus.</p>
+                <p>Gehe nach Github und erzeuge dort ein neues Projekt. Vergebe einen Namen eine Beschreibung.</p>
+                <p>Es erscheint außerdem eine Reihe von git-Befehlen, die man der Reihen nach in der Eingabeaufforderung
+                    eingeben sollte.</p>
+                …or create a new repository on the command line
+                echo "# first-try" >> README.md
+
+                <ul>
+                    <li>git init</li>
+                    <li>git add .</li>
+                    <li>git commit -m "first commit"</li>
+                    <li>git branch -M main</li>
+                    <li>git remote add origin https://github.com/pastorpixel/first-try.git</li>
+                    <li>git push -u origin main</li>
+                </ul>
+
+                <p>Somit hat man das Projekt erstellt und hochgeladen. Die ersten Befehle erzeugen ein neues git Projekt
+                    <code>git init</code>
+                </p>
+                <p><code>git add .</code> alle Dateien werden hinzugefügt</p>
+                <p><code>git commit -m "first commit"</code> Dateien werden untern dem Namen "first commit"
+                    gespeichert/commited</p>
+                <p>Dann wird ein branch erzeugt und ein Pfad überwiesen. Mittels push werden die Datein hochgeladen.</p>
+                <p>Wenn man die Seite im Browser neu läd, sieht man das Projekt, mit allen Dateien.</p>
+
+                <h3>Datei aktualisieren</h3>
+                <p>Wenn man weitere Änderungen vorgenommen hat und möchte diese Änderung als neue Version in Git
+                    abspeichern
+                    und hochladen benötigt man folgende Befehle:</p>
+                <ul>
+                    <li>git add .</li>
+                    <li>git commit -m "git Einleitung"</li>
+                    <li>git push</li>
+                </ul>
+
                 <p>Es gibt 3 Zustände, in der sich eine Datei befinden kann</p>
 
                 <ul>
@@ -166,6 +225,7 @@
 
                 <p>Git wird in der Regel über die Eingabeaufforderung gesteuert. Es gibt aber auch Programme mit
                     grafischen Oberflächen.</p>
+                <p></p>
 
                 <table>
 
