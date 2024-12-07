@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Git Lernen</title>
+        <style>
+            #wrap {
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid #000;
+                padding: 5px;
+            }
+
+            td:nth-child(1) {
+                white-space: nowrap;
+                font-family: 'Courier New', Courier, monospace;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="wrap">
+            <header>
+                <h1> Git</h1>
+                <p>Mein erstes Git Projekt und Einsteiger Tutorial.</p>
+            </header>
+
+            <section>
+                <h2>Eingabeaufforderung</h2>
+                <p>Bevor man mit Git arbeitet, sollte man die Eingabeaufforderung/ Kommandozeile oder Windows Power
+                    Shell kennen.
+                    Die Eingabeaufforderung ist ein Programm, mit dem man auf Windows und DOS zugreifen kann.
+                    Es hat keine grafische Benutzeroberfläche, sondern ist eine Text-Eingabeaufforderung.
+                    Hiermit kann man Ordner und Dateien aufrufen, Dateien erstellen oder löschen
+                    oder sogar Programme installieren, die sich nur über die Eingabeaufforderung installieren lassen,
+                    wie beispielsweise git.
+                </p>
+
+                <p>Man öffnet die Eingabeaufforderung indem man im Suchen-Fenster unten <kbd>cmd</kbd> und dann
+                    <kbd>Enter</kbd>eingibt.
+                </p>
+                <p>Man kann über die rechte Maustaste die Darstellung des Fensters ändern (Schrift, Hintergrundfarbe
+                    etc.)</p>
+                <p>In der ersten Zeile erscheint die Windows Version und ein Pfad zu einem Ordner. Standarmäßig
+                    <code>C:\Users\Windows</code>. Hierbei ist Users ein Alias auf den Ordner "Benutzer" und "Windows"
+                    ist der Name des Rechners.
+                </p>
+                <table>
+                    <caption>Befehle der Kommandozeile</caption>
+                    <tr>
+                        <th>Befehl</th>
+                        <th>Info</th>
+                        <th>Erklärung</th>
+                    </tr>
+                    <tr>
+                        <td>dir</td>
+                        <td>directory</td>
+                        <td>zeigt alle Ordner, Unterordner und Dateien an. Der Punkt steht für den aktullen Ordner. ..
+                            steht für den übergeordneten Ordner. Die Dateigrößen von Dateien in bytes werden angezeigt.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>cd</td>
+                        <td>change directory <br>
+                            cd desktop</td>
+                        <td>Verzeichnis aufrufen.</td>
+                    </tr>
+                    <tr>
+                        <td>cd ..</td>
+                        <td>parent directory</td>
+                        <td>2 Punkte verweisen auf das übergeordnete Verzeichnis. Ein Punkt auf das eigene Verzeichnis
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>cls</td>
+                        <td>clear</td>
+                        <td>Löschen der angezeigten Befehle im Fenster</td>
+                    </tr>
+                    <tr>
+                        <td>mkdir</td>
+                        <td>make directory <br>
+                            mkdir pillepalle</td>
+                        <td>Erstellen eines Ordners.</td>
+                    </tr>
+                    <tr>
+                        <td>echo Hallo > test.txt</td>
+                        <td>echo schreiben <br></td>
+                        <td>Hier wird der Text Hallo in eine neue Datei namens test.txt geschrieben.</td>
+                    </tr>
+                    <tr>
+                        <td>copy</td>
+                        <td>copy test.txt test2.txt</td>
+                        <td>Kopieren einer Datei test.txt und erstellen einer neuen Datei test2.txt</td>
+                    </tr>
+                    <tr>
+                        <td>explorer .</td>
+                        <td>Explorer öffnen</td>
+                        <td>Öffnet de aktuellen Ordner im Explorer
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>wmic logicaldisk get name</td>
+                        <td>Laufwerke anzeigen</td>
+                        <td>Listet alle Laufwerke auf</td>
+                    </tr>
+                    <tr>
+                        <td>D:</td>
+                        <td>Laufwerk D</td>
+                        <td>Um zu einem Laufwerk zu wechseln gibt man nicht cd ein sondern einfach den
+                            Laufwerksbuchstaben.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>chkdsk</td>
+                        <td>check disc</td>
+                        <td>Überprüft das aktuelle Laufwerk auf Fehler. <br>
+                            chkdsk/f Repariert gefundene Fehler. <br>
+                            chkdsk/r Findet und repariert fehlerhafte Sektoren und stellt lesbare Informationen wieder
+                            her.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>tasklist</td>
+                        <td></td>
+                        <td>Zeigt alle laufenden Prozesse an</td>
+                    </tr>
+                    <tr>
+                        <td>shutdown/s</td>
+                        <td></td>
+                        <td>Fährt das System runter</td>
+                    </tr>
+                </table>
+
+            </section>
+
+
+            <section>
+                <h2>Git</h2>
+                <p>Es gibt 3 Zustände, in der sich eine Datei befinden kann</p>
+
+                <ul>
+                    <li>Modified bedeutet, dass eine Datei geändert, aber noch nicht in die lokale Datenbank eingecheckt
+                        wurde.</li>
+                    <li>Staged bedeutet, dass eine geänderte Datei in ihrem gegenwärtigen Zustand für den nächsten
+                        Commit vorgemerkt ist.</li>
+                    <li>Committed bedeutet, dass die Daten sicher in der lokalen Datenbank gespeichert sind.</li>
+                </ul>
+
+
+
+
+                <p>Git wird in der Regel über die Eingabeaufforderung gesteuert. Es gibt aber auch Programme mit
+                    grafischen Oberflächen.</p>
+
+                <table>
+
+                    <caption>Git Befehle</caption>
+                    <tr>
+                        <th>Befehl</th>
+                        <th>Info</th>
+                        <th>Erklärung</th>
+                    </tr>
+                    <tr>
+                        <td>git init</td>
+                        <td>Initialisieren</td>
+                        <td>Eine Git Datei entsteht</td>
+                    </tr>
+                    <tr>
+                        <td>git config --global --list</td>
+                        <td></td>
+                        <td>das ist die globale Konfiguration das macht man einmal und muss es nicht in jedem
+                            Verzeichnis machen deswegen global</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+
+        </div>
+
+
+
+    </body>
+
+</html>
