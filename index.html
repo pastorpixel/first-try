@@ -34,6 +34,8 @@
             <header>
                 <h1> Git</h1>
                 <p>Mein erstes Git Projekt und Einsteiger Tutorial.</p>
+                <p>Siehe dieses Youtube <a href="https://youtu.be/LxalVfux7Nc?si=hMEegZ5CDN-DHnPx">Video
+                        Eingabeaufforderung</a></p>
             </header>
 
             <section>
@@ -90,6 +92,12 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>D:</td>
+                        <td>Laufwerk D</td>
+                        <td>Um zu einem Laufwerk zu wechseln gibt man nicht cd ein sondern einfach den
+                            Laufwerksbuchstaben und Doppelpunkt</td>
+                    </tr>
+                    <tr>
                         <td>cls</td>
                         <td>clear</td>
                         <td>Löschen der angezeigten Befehle im Fenster</td>
@@ -121,12 +129,7 @@
                         <td>Laufwerke anzeigen</td>
                         <td>Listet alle Laufwerke auf</td>
                     </tr>
-                    <tr>
-                        <td>D:</td>
-                        <td>Laufwerk D</td>
-                        <td>Um zu einem Laufwerk zu wechseln gibt man nicht cd ein sondern einfach den
-                            Laufwerksbuchstaben.</td>
-                    </tr>
+
                     <tr>
                         <td>code</td>
                         <td>in VSC öffnen <br>
@@ -154,12 +157,34 @@
                         <td></td>
                         <td>Fährt das System runter</td>
                     </tr>
+                    <tr>
+                        <td>befehl /?</td>
+                        <td>Infos zu Befehlen</td>
+                        <td>Gebe einen Befehl mit einem Fragezeichen ein, um eine Erläuterung des Befehls zu erhalten.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ipconfig</td>
+                        <td>Ip Adresse</td>
+                        <td>Alles über die Ip Adresse</td>
+                    </tr>
+                    <tr>
+                        <td>tracert</td>
+                        <td>tracert www.google.de</td>
+                        <td>Routenverfolgung. Erfahre mehr über die angezeigten IP-Adressen bei whatsmyipaddress.com
+                        </td>
+                    </tr>
                 </table>
                 <h3>Automatisierungen</h3>
                 <p>Erstelle eine Textdatei mit Notepad und speichere sie mit der Endung cmd oder bat ab. Füge dort
                     Befehle ein. Beim Aufruf werden diese Befehle ausgeführt. <br>
                     Mehrere Befehle werden in einzelnen Zeilen abgelegt.
                 </p>
+                <p>Beispielsweise ein Programm öffnen. <code>chrome</code><br>
+                    Die Kürzel oder Pfade der Programme kann man nachschaue mit rechter Maus.</p>
+
+                <p>Eine Datei in VSC öffnen: <code>code "D:\web\work\git-lernen"</code></p>
+
             </section>
 
 
@@ -168,7 +193,7 @@
                 <p>Git ermöglicht das Sichern verschiedener Versionen von Projekten. Man kann ein Projekt Schritt für
                     Schritt aufbauen und dann später mittels Git die verschiedenen Schritte oder Zustände des Projekts
                     erkunden.</p>
-                <p>Git ermöglicht die Zusammenarbeit in Teams und außerdem kann mein Projekt bei Github hochladen und
+                <p>Git ermöglicht die Zusammenarbeit in Teams und außerdem kann man ein Projekt bei Github hochladen und
                     bereitstellen.</p>
                 <p>Lege dazu einen Account bei git Hub an.</p>
                 <p>Installiere Git auf dem Rechner.</p>
@@ -177,10 +202,14 @@
                 </p>
                 <p>Erstelle ein Projekt in einem Ordner. Wähle mit der Eingabeaufforderung den Ordner aus.</p>
                 <p>Gehe nach Github und erzeuge dort ein neues Projekt. Vergebe einen Namen eine Beschreibung.</p>
-                <p>Es erscheint außerdem eine Reihe von git-Befehlen, die man der Reihen nach in der Eingabeaufforderung
+                <p>Es erscheint außerdem eine Reihe von git-Befehlen, die man der Reihe nach in der Eingabeaufforderung
                     eingeben sollte.</p>
-                …or create a new repository on the command line
-                echo "# first-try" >> README.md
+
+                <pre>
+                    …or create a new repository on the command line
+                    echo "# first-try" >> README.md
+                </pre>
+
 
                 <ul>
                     <li>git init</li>
@@ -247,34 +276,43 @@
                             Verzeichnis machen deswegen global</td>
                     </tr>
                     <tr>
+                        <td>git status</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Untracked Files, hier werden in roter Schrift Dateien angezeigt, die noch nicht commited
+                            sind. Der Ordner ".git" wird eventuell nicht aufgeführt, wenn versteckte Dateien in den
+                            Windowseinstellungen als "nicht angezeigt" eingestellt sind.</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>git add --all</td>
+                        <td>git add . <br>
+                            Dateien hinzufügen</td>
+                        <td>Vor dem Commit müssen die Dateien hinzugefügt werden, die commited werden sollen. Der Punkt
+                            steht für den gesamten Ordner</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>git commit -m "my new version"</td>
+                        <td>einstellen <br> Versionsbezeichnung</td>
+                        <td>Die zuvor mit <code>add</code> hinzugefügten Dateien werden nun als neue Version
+                            eingestellt/ commited. Das <code>-m</code> steht für message danach gibt man eine
+                            Bezeichnung für diese Version in Anführungsstrichen ein.</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>git push</td>
+                        <td>hochladen</td>
+                        <td>Die Dateien werden nach github hochgeladen. Der Pfad zum Github-Projekt wurde zuvor bei der
+                            Initalisierung angegeben.</td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>git log</td>
+                        <td>Logbuch</td>
+                        <td>Alles was man gemacht hat wird im logbuch gespeichert.
+                            Die Historie bekommt die Nummern von allen Versionen. Author und Message der Versionen
+                            werden angezeigt.</td>
                     </tr>
                     <tr>
+                        <td>git checkout 1234567890</td>
                         <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>Checkout mit einer bestimmten Versionsnummer</td>
                     </tr>
                     <tr>
                         <td></td>
