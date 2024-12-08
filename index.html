@@ -75,8 +75,9 @@
                     <tr>
                         <td>dir</td>
                         <td>directory</td>
-                        <td>zeigt alle Ordner, Unterordner und Dateien an. Der Punkt steht für den aktullen Ordner. ..
-                            steht für den übergeordneten Ordner. Die Dateigrößen von Dateien in bytes werden angezeigt.
+                        <td>zeigt alle Ordner, Unterordner und Dateien an. Der Punkt steht für den aktuellen Ordner. ..
+                            2 Punkte stehen für den übergeordneten Ordner. Die Dateigrößen von Dateien in bytes werden
+                            angezeigt.
                         </td>
                     </tr>
                     <tr>
@@ -182,6 +183,10 @@
                 </p>
                 <p>Beispielsweise ein Programm öffnen. <code>chrome</code><br>
                     Die Kürzel oder Pfade der Programme kann man nachschaue mit rechter Maus.</p>
+                <p>Über das Programm "Systemumgebungsvariablen bearbeiten" kann man über "Pfad" einen Pfad zu einem
+                    Ordner angeben, in dem sich ein Programm mit der Endung exe befindet. Nach einem Neustart kann man
+                    über den Namen das Programm starten. <a
+                        href="https://youtu.be/LxalVfux7Nc?si=-SBbJXhBT6sdnKGk&t=1720">siehe Video</a></p>
 
                 <p>Eine Datei in VSC öffnen: <code>code "D:\web\work\git-lernen"</code></p>
 
@@ -200,15 +205,17 @@
                 <p>Nun kann man mit der Eingabeaufforderung git Befehle eingeben. Sie beginnen immer mit
                     <code>git</code>
                 </p>
-                <p>Erstelle ein Projekt in einem Ordner. Wähle mit der Eingabeaufforderung den Ordner aus.</p>
-                <p>Gehe nach Github und erzeuge dort ein neues Projekt. Vergebe einen Namen eine Beschreibung.</p>
-                <p>Es erscheint außerdem eine Reihe von git-Befehlen, die man der Reihe nach in der Eingabeaufforderung
-                    eingeben sollte.</p>
-
-                <pre>
-                    …or create a new repository on the command line
-                    echo "# first-try" >> README.md
-                </pre>
+                <h3>Github</h3>
+                <p>Projekt mit Github erstellen. Siehe auch <a
+                        href="https://youtu.be/LxalVfux7Nc?si=g5NKrlaW-2Eu9uNJ&t=988">dieses Video</a></p>
+                <p>Erstelle ein Projekt in einem Ordner. Wähle mit der Eingabeaufforderung den Ordner aus,
+                    aber führe
+                    nicht den <code>git init</code> Befehl aus.</p>
+                <p>Gehe nach Github und erzeuge dort ein neues Projekt/repository. Vergebe einen Namen eine
+                    Beschreibung, aber
+                    wähle nicht "Add a README file"</p>
+                <p>Nach Klick auf "Creating Repository" erscheint eine Reihe von git-Befehlen, die man der Reihe nach in
+                    der Eingabeaufforderung eingeben kann.</p>
 
 
                 <ul>
@@ -329,9 +336,20 @@
                         </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>git clone http://myUrl</td>
+                        <td>Klon von Github</td>
+                        <td>
+                            <p>Wähle das Projekt bei github <br>
+                                wähle anstatt copy die Option clone. <br>
+                                Wähle Option https <br>
+                                kopiere die url.
+                            </p>
+                            <p>Erstelle auf dem Rechner ein Verzeichnis. <br>
+                                Rufe es mit Kommandozeile auf. <br>
+                                Verwende die zuvor kopierte Adresse <br>
+                                <code>git clone https://github.com/pastorpixel/first-try</code>
+                            </p>
+                        </td>
                     </tr>
                     <tr>
                         <td></td>
